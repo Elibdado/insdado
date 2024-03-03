@@ -79,7 +79,7 @@
 }
 
 #searchResults li {
-  width: 20%; 
+  width: 300px; 
   margin-left: 37%;
   padding: 10px;
   border: 1px solid #000000;
