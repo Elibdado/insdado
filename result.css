@@ -1,0 +1,173 @@
+.image-container {
+  position: fixed;
+  top: 0;
+  right: 0; /* Position from the right edge */
+  display: flex;
+  justify-content: flex-end; /* Align content to the end (right) */
+  align-items: flex-start; /* Align items to the start (top) */
+  animation: roll 4s infinite linear;
+  margin-top: 10px;
+  margin-right: 35%;
+}
+
+.rotate-image {
+  width: 90px;
+  height: 90px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate-image:hover {
+  transform: rotateY(360deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .rotate-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* For screens between 600px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .rotate-image {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+
+#searchResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  margin-top: 20px; /* Add some space at the top */
+}
+
+#backButton {
+  background-color: #765827; 
+  border: none;
+  margin-left: 37%;
+  color: white;
+  padding: 7px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  position:relative;
+}
+
+
+#searchResults a {
+  font-family:'Times New Roman', Times, serif ;
+  font-weight: bold;
+  color: rgb(188, 37, 37);
+  background-color: beige;
+  
+}
+
+#searchResults li {
+  width: 20%; 
+  margin-left: 37%;
+  padding: 10px;
+  border: 1px solid #000000;
+  transition: transform 0.3s;
+  color: #ffffff;
+  margin-bottom: 10px; 
+  background-color: beige;
+  border-radius: 14px;
+}
+
+#searchResults li:hover {
+  transform: scale(1.05);
+}
+
+
+#biblioGrid {
+  width: 30%;
+  margin-left: 37%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 2px;
+  border: 2px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(5, 5, 5);
+  font-weight:900;
+  background-color: beige;
+  border-radius: 14px;
+}
+
+#biblioGrid div {
+  padding: 2px;
+}
+
+/*h1 {
+  text-align: center; 
+} */
+
+h2 {
+  text-align: center;
+}
+
+/* Center the search input and button */
+#homePage {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Adjust the distance from the top */
+.search-container {
+  position: absolute; 
+  padding: 2%;
+  top: 13px; 
+  right: 20px;   
+}
+
+.search-input {
+  padding: 10px; /* Add padding to input */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Gray border */
+}
+
+.search-btn {
+  background-color: #C38154;
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+
+#definition-box {
+  margin-bottom: 20px; 
+  background-color: #f0f0f0;
+}
+  
+
+
+#resultsPage {
+  display: none; 
+  background-color: none; 
+}
+
+
+#bibliographic-data {
+  margin-top: 20px; 
+  background-color: #f0f0f0;   
+}
